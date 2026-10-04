@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PRO WEB STUDIO — Premium Web Design & Development Studio</title>
+<meta name="description" content="PRO WEB STUDIO is an independent studio crafting fast, unforgettable websites and digital products for ambitious brands.">
+<meta property="og:title" content="PRO WEB STUDIO — Web Design & Development Studio">
+<meta property="og:description" content="Websites that move people, and metrics.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config={theme:{extend:{colors:{ink:'#0A0A0B',paper:'#F4F2EE',accent:'#C6FF3D'},
+fontFamily:{display:['"Bricolage Grotesque"','sans-serif'],body:['Inter','sans-serif'],serif:['"Instrument Serif"','serif'],mono:['"JetBrains Mono"','monospace']}}}}
+</script>
+<style>
+:root{--ink:#0A0A0B;--paper:#F4F2EE;--accent:#C6FF3D;--line:rgba(244,242,238,.12);--pad:clamp(1.25rem,5vw,5rem);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+html.lenis{height:auto}.lenis.lenis-smooth{scroll-behavior:auto}
+body{background:var(--ink);color:var(--paper);font-family:Inter,sans-serif;overflow-x:hidden}
+*:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.pad{padding-inline:var(--pad)}
+.h-xl{font-family:'Bricolage Grotesque';font-weight:800;letter-spacing:-.045em;line-height:.9;font-size:clamp(3rem,10.5vw,11rem)}
+.h-lg{font-family:'Bricolage Grotesque';font-weight:700;letter-spacing:-.04em;line-height:.95;font-size:clamp(2.2rem,6vw,6rem)}
+.serif{font-family:'Instrument Serif';font-style:italic;font-weight:400;letter-spacing:-.02em}
+.label{font-family:'JetBrains Mono';font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(244,242,238,.6)}
+.mask{overflow:hidden;display:block;padding-bottom:.08em}.mask>span{display:block}
+body::after{content:"";position:fixed;inset:-50%;pointer-events:none;z-index:90;opacity:.07;
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:grain 1s steps(6) infinite}
+@keyframes grain{0%{transform:translate(0)}20%{transform:translate(-4%,3%)}40%{transform:translate(3%,-5%)}60%{transform:translate(-5%,-2%)}80%{transform:translate(4%,4%)}}
+.glass{background:rgba(244,242,238,.04);border:1px solid var(--line);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-radius:1.5rem}
+.glow{position:relative;overflow:hidden;transform-style:preserve-3d;transition:transform .2s ease-out,border-color .3s}
+.glow::before{content:"";position:absolute;inset:0;background:radial-gradient(400px circle at var(--mx,50%) var(--my,50%),rgba(198,255,61,.14),transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}
+.glow:hover::before{opacity:1}.glow:hover{border-color:rgba(198,255,61,.45)}
+.glow svg{transition:transform .6s cubic-bezier(.2,.8,.2,1)}.glow:hover svg{transform:rotate(90deg) scale(1.15)}
+.btn{position:relative;display:inline-flex;align-items:center;gap:.6rem;padding:1rem 1.7rem;border-radius:999px;border:1px solid var(--line);overflow:hidden;font-weight:500;isolation:isolate}
+.btn::before{content:"";position:absolute;inset:0;background:var(--accent);transform:translateY(101%);transition:transform .5s cubic-bezier(.2,.8,.2,1);z-index:-1;border-radius:inherit}
+.btn:hover::before{transform:none}.btn:hover{color:var(--ink)}
+.btn-fill{background:var(--accent);color:var(--ink);border-color:var(--accent)}
+.btn-fill::before{background:var(--paper)}
+.ulink{position:relative}.ulink::after{content:"";position:absolute;left:0;bottom:-3px;width:100%;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .4s}
+.ulink:hover::after{transform:scaleX(1);transform-origin:left}
+.mesh{position:absolute;inset:0;overflow:hidden;z-index:-1}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5}
+.b1{width:40vw;height:40vw;left:-8%;top:5%;background:#7C5CFF;animation:fl 14s ease-in-out infinite alternate}
+.b2{width:34vw;height:34vw;right:-6%;top:20%;background:#C6FF3D;opacity:.22;animation:fl 18s ease-in-out infinite alternate-reverse}
+@keyframes fl{to{transform:translate(8vw,6vh) scale(1.2)}}
+.marq{display:flex;width:max-content;animation:mq 30s linear infinite}.marq:hover{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+#dot,#ring{position:fixed;top:0;left:0;pointer-events:none;z-index:200;border-radius:50%;display:none}
+#dot{width:6px;height:6px;background:var(--accent);margin:-3px}
+#ring{width:38px;height:38px;margin:-19px;border:1px solid var(--paper);align-items:center;justify-content:center;font-size:.65rem;font-family:'JetBrains Mono';transition:width .3s,height .3s,margin .3s,background .3s,color .3s}
+#ring.hov{width:70px;height:70px;margin:-35px;background:rgba(198,255,61,.15);border-color:var(--accent)}
+#ring.view{width:90px;height:90px;margin:-45px;background:var(--accent);color:var(--ink);border-color:var(--accent)}
+@media(hover:hover) and (pointer:fine){#dot{display:block}#ring{display:flex}body,a,button{cursor:none}}
+@property --a{syntax:'<angle>';initial-value:0deg;inherits:false}
+.gb{border:1px solid transparent;background:linear-gradient(var(--ink),var(--ink)) padding-box,conic-gradient(from var(--a),#C6FF3D,#7C5CFF,#C6FF3D) border-box;animation:spin 5s linear infinite}
+@keyframes spin{to{--a:360deg}}
+.lift{transition:transform .4s cubic-bezier(.2,.8,.2,1)}.lift:hover{transform:translateY(-8px)}
+.faq-b{height:0;overflow:hidden}.pm{position:relative;width:18px;height:18px;flex:none}
+.pm::before,.pm::after{content:"";position:absolute;background:var(--accent);left:0;top:50%;width:100%;height:2px;transition:transform .4s}
+.pm::after{transform:rotate(90deg)}[aria-expanded=true] .pm::after{transform:rotate(0)}
+#track{display:flex;gap:1.25rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}#track::-webkit-scrollbar{display:none}
+#track>article{flex:0 0 min(86vw,520px);scroll-snap-align:center;transition:opacity .4s,transform .4s}
+#track>article:not(.on){opacity:.35;transform:scale(.94)}
+#bar{position:fixed;top:0;left:0;height:2px;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:left;z-index:150}
+#menu{clip-path:inset(0 0 100% 0);visibility:hidden}
+@media(prefers-reduced-motion:reduce){*,::before,::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="bar"></div><div id="dot"></div><div id="ring"><span></span></div>
+
+<div id="pre" class="fixed inset-0 z-[300] bg-ink flex items-end justify-between p-6 md:p-12">
+  <span class="label">PRO WEB STUDIO®</span>
+  <span id="cnt" class="h-xl serif text-accent">0</span>
+</div>
+
+<header class="fixed top-0 inset-x-0 z-[100] pad pt-4">
+  <nav class="glass flex items-center justify-between px-5 py-3 max-w-7xl mx-auto" aria-label="Main">
+    <a href="#top" class="flex items-center gap-2 font-display font-extrabold text-base sm:text-xl tracking-tight uppercase" aria-label="PRO WEB STUDIO home"><span class="grid place-items-center w-8 h-8 rounded-lg bg-accent text-ink text-sm">P</span>PRO WEB<span class="text-accent">STUDIO</span></a>
+    <ul class="hidden md:flex gap-8 text-sm">
+      <li><a class="ulink" href="#services">Services</a></li><li><a class="ulink" href="#work">Work</a></li>
+      <li><a class="ulink" href="#process">Process</a></li><li><a class="ulink" href="#pricing">Pricing</a></li><li><a class="ulink" href="#faq">FAQ</a></li>
+    </ul>
+    <div class="flex items-center gap-3">
+      <a href="#contact" class="btn btn-fill mag hidden sm:inline-flex !py-2.5 text-sm">Start a project</a>
+      <button id="burger" class="md:hidden w-10 h-10 grid place-items-center" aria-label="Open menu" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h18M3 16h18"/></svg></button>
+    </div>
+  </nav>
+</header>
+<div id="menu" class="fixed inset-0 z-[99] bg-ink pad flex flex-col justify-center gap-4" aria-hidden="true">
+  <a class="mi h-lg" href="#services">Services</a><a class="mi h-lg" href="#work">Work</a><a class="mi h-lg" href="#process">Process</a>
+  <a class="mi h-lg" href="#pricing">Pricing</a><a class="mi h-lg text-accent" href="#contact">Let's talk <span class="serif">→</span></a>
+</div>
+
+<main id="top">
+<section class="relative min-h-screen flex flex-col justify-center pad pt-32 pb-16">
+  <div class="mesh" aria-hidden="true"><div class="blob b1"></div><div class="blob b2"></div></div>
+  <p class="label mb-6">Independent web studio — Est. 2018</p>
+  <h1 class="h-xl">
+    <span class="mask"><span class="hl">We build sites</span></span>
+    <span class="mask"><span class="hl">that feel <span class="serif text-accent">alive</span></span></span>
+    <span class="mask"><span class="hl">&amp; <span id="kw" class="serif inline-block">convert.</span></span></span>
+  </h1>
+  <div class="mt-10 flex flex-col md:flex-row md:items-end justify-between gap-8">
+    <p class="max-w-md text-lg text-paper/70 hl-s">Strategy, design and engineering under one roof. We turn ambitious brands into fast, unforgettable digital experiences.</p>
+    <div class="flex flex-wrap gap-3 hl-s"><a href="#contact" class="btn btn-fill mag">Start a project ↗</a><a href="#work" class="btn mag">See our work</a></div>
+  </div>
+  <div class="absolute bottom-6 left-1/2 -translate-x-1/2 label flex flex-col items-center gap-2" aria-hidden="true">Scroll<span class="w-px h-10 bg-accent block origin-top" id="sl"></span></div>
+</section>
+
+<section class="border-y border-[var(--line)] py-8 overflow-hidden" aria-label="Clients">
+  <div class="marq font-display font-bold text-3xl md:text-5xl tracking-tight text-paper/40" id="mq">
+    <span class="px-8">Lumen</span><span class="px-8">Aether</span><span class="px-8 serif">Monolith</span><span class="px-8">Vertex</span><span class="px-8">Oasis</span><span class="px-8 serif">Kinetic</span><span class="px-8">Halcyon</span><span class="px-8">Fjord</span>
+    <span class="px-8">Lumen</span><span class="px-8">Aether</span><span class="px-8 serif">Monolith</span><span class="px-8">Vertex</span><span class="px-8">Oasis</span><span class="px-8 serif">Kinetic</span><span class="px-8">Halcyon</span><span class="px-8">Fjord</span>
+  </div>
+</section>
+
+<section class="pad py-32 md:py-48">
+  <p id="fill" class="h-lg max-w-6xl !leading-[1.05]">Great websites aren't decoration. They're the sharpest sales tool your business owns, so we design every pixel to earn attention, build trust and drive revenue.</p>
+</section>
+
+<section id="services" class="pad pb-32">
+  <p class="label mb-4">( 01 ) Services</p>
+  <h2 class="h-lg mb-14 rv">Everything you need to <span class="serif text-accent">launch &amp; grow</span></h2>
+  <div class="grid grid-cols-1 md:grid-cols-6 gap-4" style="perspective:1200px">
+    <article class="glass glow tilt p-8 md:col-span-4 min-h-[260px] flex flex-col justify-between"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#C6FF3D" stroke-width="1.5"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg><div><h3 class="font-display text-3xl font-bold">Web Design</h3><p class="text-paper/60 mt-2 max-w-md">Art-directed interfaces with obsessive attention to typography, rhythm and motion.</p></div></article>
+    <article class="glass glow tilt p-8 md:col-span-2 min-h-[260px] flex flex-col justify-between"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#C6FF3D" stroke-width="1.5"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg><div><h3 class="font-display text-2xl font-bold">Development</h3><p class="text-paper/60 mt-2">Clean, accessible, blazing-fast code. 95+ Lighthouse as standard.</p></div></article>
+    <article class="glass glow tilt p-8 md:col-span-2 min-h-[240px] flex flex-col justify-between"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#C6FF3D" stroke-width="1.5"><path d="M6 6h15l-2 9H8L6 3H3"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg><div><h3 class="font-display text-2xl font-bold">E-commerce</h3><p class="text-paper/60 mt-2">Shopify and headless stores built to convert.</p></div></article>
+    <article class="glass glow tilt p-8 md:col-span-2 min-h-[240px] flex flex-col justify-between"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#C6FF3D" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/></svg><div><h3 class="font-display text-2xl font-bold">SEO</h3><p class="text-paper/60 mt-2">Technical foundations and content that rank.</p></div></article>
+    <article class="glass glow tilt p-8 md:col-span-2 min-h-[240px] flex flex-col justify-between"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#C6FF3D" stroke-width="1.5"><path d="M12 3l2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5z"/></svg><div><h3 class="font-display text-2xl font-bold">Branding</h3><p class="text-paper/60 mt-2">Identities and systems with a point of view.</p></div></article>
+    <article class="glass glow tilt p-8 md:col-span-6 flex flex-col md:flex-row md:items-center justify-between gap-6"><div><h3 class="font-display text-2xl font-bold">Maintenance &amp; Growth</h3><p class="text-paper/60 mt-2">Monthly care plans: updates, monitoring, A/B tests and iteration.</p></div><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#C6FF3D" stroke-width="1.5"><path d="M21 12a9 9 0 11-3-6.7M21 4v5h-5"/></svg></article>
+  </div>
+</section>
+
+<section id="work" class="pad pb-32">
+  <p class="label mb-4">( 02 ) Selected work</p>
+  <h2 class="h-lg mb-14 rv">Recent <span class="serif text-accent">projects</span></h2>
+  <div id="stack">
+    <a href="#" class="pc sticky top-24 block mb-8 rounded-3xl overflow-hidden border border-[var(--line)] bg-ink viewable">
+      <div class="overflow-hidden aspect-[16/9] md:aspect-[21/9]"><img class="w-full h-full object-cover" src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9' preserveAspectRatio='none'><defs><linearGradient id='g' x2='1' y2='1'><stop stop-color='%237C5CFF'/><stop offset='1' stop-color='%230A0A0B'/></linearGradient></defs><rect width='16' height='9' fill='url(%23g)'/></svg>" alt="Lumen fintech dashboard preview"></div>
+      <div class="p-6 flex justify-between items-end"><h3 class="font-display text-3xl md:text-5xl font-bold tracking-tight">Lumen Finance</h3><span class="label">Web app · 2026</span></div></a>
+    <a href="#" class="pc sticky top-28 block mb-8 rounded-3xl overflow-hidden border border-[var(--line)] bg-ink viewable">
+      <div class="overflow-hidden aspect-[16/9] md:aspect-[21/9]"><img class="w-full h-full object-cover" src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9' preserveAspectRatio='none'><defs><linearGradient id='g' x2='1' y2='1'><stop stop-color='%23C6FF3D'/><stop offset='1' stop-color='%23123'/></linearGradient></defs><rect width='16' height='9' fill='url(%23g)'/></svg>" alt="Aether skincare store preview"></div>
+      <div class="p-6 flex justify-between items-end"><h3 class="font-display text-3xl md:text-5xl font-bold tracking-tight">Aether Skincare</h3><span class="label">E-commerce · 2025</span></div></a>
+    <a href="#" class="pc sticky top-32 block mb-8 rounded-3xl overflow-hidden border border-[var(--line)] bg-ink viewable">
+      <div class="overflow-hidden aspect-[16/9] md:aspect-[21/9]"><img class="w-full h-full object-cover" src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9' preserveAspectRatio='none'><defs><linearGradient id='g' x2='1' y2='1'><stop stop-color='%23F4F2EE'/><stop offset='1' stop-color='%237C5CFF'/></linearGradient></defs><rect width='16' height='9' fill='url(%23g)'/></svg>" alt="Monolith architects portfolio preview"></div>
+      <div class="p-6 flex justify-between items-end"><h3 class="font-display text-3xl md:text-5xl font-bold tracking-tight">Monolith Architects</h3><span class="label">Brand + Web · 2025</span></div></a>
+  </div>
+</section>
+
+<section id="process" class="overflow-hidden border-y border-[var(--line)]">
+  <div id="hz" class="flex h-screen w-max items-center">
+    <div class="w-screen pad flex-none"><p class="label mb-4">( 03 ) Process</p><h2 class="h-xl">How we <span class="serif text-accent">work</span> →</h2></div>
+    <div class="w-[85vw] md:w-[50vw] flex-none px-6"><span class="h-xl serif text-accent/30">01</span><h3 class="h-lg">Discover</h3><p class="text-paper/60 mt-4 max-w-sm">Workshops, audits and research to find the real problem and the sharpest opportunity.</p></div>
+    <div class="w-[85vw] md:w-[50vw] flex-none px-6"><span class="h-xl serif text-accent/30">02</span><h3 class="h-lg">Design</h3><p class="text-paper/60 mt-4 max-w-sm">Concepts, prototypes and motion studies. You see and feel it before a line of code ships.</p></div>
+    <div class="w-[85vw] md:w-[50vw] flex-none px-6"><span class="h-xl serif text-accent/30">03</span><h3 class="h-lg">Develop</h3><p class="text-paper/60 mt-4 max-w-sm">Performant, accessible, CMS-ready builds with weekly demos and zero surprises.</p></div>
+    <div class="w-[85vw] md:w-[50vw] flex-none px-6 pr-[10vw]"><span class="h-xl serif text-accent/30">04</span><h3 class="h-lg">Launch</h3><p class="text-paper/60 mt-4 max-w-sm">QA, analytics, training and a calm go-live, then ongoing support as you grow.</p></div>
+  </div>
+</section>
+
+<section class="pad py-32 grid grid-cols-2 md:grid-cols-4 gap-10">
+  <div><div class="h-lg"><span class="ct" data-to="140">0</span><span class="text-accent">+</span></div><p class="label mt-2">Projects shipped</p></div>
+  <div><div class="h-lg"><span class="ct" data-to="85">0</span><span class="text-accent">+</span></div><p class="label mt-2">Happy clients</p></div>
+  <div><div class="h-lg"><span class="ct" data-to="8">0</span><span class="text-accent">yrs</span></div><p class="label mt-2">In the craft</p></div>
+  <div><div class="h-lg"><span class="ct" data-to="98">0</span><span class="text-accent">%</span></div><p class="label mt-2">Satisfaction</p></div>
+</section>
+
+<section class="pb-32">
+  <div class="pad"><p class="label mb-4">( 04 ) Kind words</p><h2 class="h-lg mb-12">Clients <span class="serif text-accent">say</span></h2></div>
+  <div id="track" class="pad" tabindex="0" aria-label="Testimonials">
+    <article class="glass p-8 on"><p class="text-xl">"Our conversion rate rose 62% in the first quarter. PRO WEB STUDIO treats design as a growth lever, not a coat of paint."</p><p class="label mt-8">Maya Chen — CMO, Lumen</p></article>
+    <article class="glass p-8"><p class="text-xl">"The most considered, collaborative team we've worked with. The site feels like our brand finally has a voice."</p><p class="label mt-8">Jonas Eriksen — Founder, Aether</p></article>
+    <article class="glass p-8"><p class="text-xl">"Delivered early, flawlessly fast, and our team can edit everything themselves. Exceptional."</p><p class="label mt-8">Priya Nair — Director, Monolith</p></article>
+    <article class="glass p-8"><p class="text-xl">"They challenged our brief, and the result outperformed everything we had imagined."</p><p class="label mt-8">Luca Romano — CEO, Vertex</p></article>
+  </div>
+</section>
+
+<section id="pricing" class="pad pb-32">
+  <p class="label mb-4">( 05 ) Pricing</p><h2 class="h-lg mb-14 rv">Clear <span class="serif text-accent">investment</span></h2>
+  <div class="grid md:grid-cols-3 gap-5 items-stretch">
+    <article class="glass lift p-8 flex flex-col"><h3 class="font-display text-2xl font-bold">Launch</h3><p class="h-lg my-4">$4k</p><ul class="text-paper/70 space-y-2 flex-1"><li>— 5-page custom site</li><li>— Responsive + SEO basics</li><li>— 3 week delivery</li></ul><a href="#contact" class="btn mt-8 justify-center">Get started</a></article>
+    <article class="gb lift p-8 flex flex-col rounded-3xl"><span class="label text-accent">Most popular</span><h3 class="font-display text-2xl font-bold">Studio</h3><p class="h-lg my-4">$9k</p><ul class="text-paper/70 space-y-2 flex-1"><li>— 10+ pages with CMS</li><li>— Motion &amp; interaction design</li><li>— Analytics and CRO setup</li><li>— 6 week delivery</li></ul><a href="#contact" class="btn btn-fill mt-8 justify-center">Get started</a></article>
+    <article class="glass lift p-8 flex flex-col"><h3 class="font-display text-2xl font-bold">Partner</h3><p class="h-lg my-4">Custom</p><ul class="text-paper/70 space-y-2 flex-1"><li>— Web apps &amp; e-commerce</li><li>— Brand system included</li><li>— Dedicated monthly team</li></ul><a href="#contact" class="btn mt-8 justify-center">Book a call</a></article>
+  </div>
+</section>
+
+<section id="faq" class="pad pb-32 max-w-5xl">
+  <p class="label mb-4">( 06 ) FAQ</p><h2 class="h-lg mb-12">Good <span class="serif text-accent">questions</span></h2>
+  <div class="border-t border-[var(--line)]">
+    <div class="border-b border-[var(--line)]"><h3><button class="fq w-full flex justify-between items-center py-6 text-left text-xl font-display font-bold" aria-expanded="false">How long does a project take?<span class="pm"></span></button></h3><div class="faq-b text-paper/65"><p class="pb-6 max-w-2xl">Most sites ship in 3–8 weeks depending on scope. We share a clear timeline before we start.</p></div></div>
+    <div class="border-b border-[var(--line)]"><h3><button class="fq w-full flex justify-between items-center py-6 text-left text-xl font-display font-bold" aria-expanded="false">Can we edit the site ourselves?<span class="pm"></span></button></h3><div class="faq-b text-paper/65"><p class="pb-6 max-w-2xl">Yes. We build on a CMS suited to your team and train you to publish with confidence.</p></div></div>
+    <div class="border-b border-[var(--line)]"><h3><button class="fq w-full flex justify-between items-center py-6 text-left text-xl font-display font-bold" aria-expanded="false">Do you offer ongoing support?<span class="pm"></span></button></h3><div class="faq-b text-paper/65"><p class="pb-6 max-w-2xl">Our care plans cover hosting, updates, monitoring and monthly improvements.</p></div></div>
+  </div>
+</section>
+
+<section id="contact" class="pad py-32 text-center border-t border-[var(--line)]">
+  <p class="label mb-6">Ready when you are</p>
+  <h2 class="h-xl rv">Let's make <span class="serif text-accent">something</span> remarkable.</h2>
+  <a href="mailto:hello@prowebstudio.com" class="btn btn-fill mag mt-12 text-lg">hello@prowebstudio.com ↗</a>
+</section>
+</main>
+
+<footer class="pad pt-16 pb-6 border-t border-[var(--line)] overflow-hidden">
+  <div class="flex flex-wrap justify-between gap-8 text-sm mb-12">
+    <ul class="flex gap-6"><li><a class="ulink" href="#services">Services</a></li><li><a class="ulink" href="#work">Work</a></li><li><a class="ulink" href="#pricing">Pricing</a></li></ul>
+    <ul class="flex gap-6"><li><a class="ulink" href="#">Instagram</a></li><li><a class="ulink" href="#">LinkedIn</a></li><li><a class="ulink" href="#">Dribbble</a></li></ul>
+    <button id="up" class="btn !py-2" aria-label="Back to top">Back to top ↑</button>
+  </div>
+  <p class="font-display font-extrabold uppercase tracking-[-.05em] leading-[.85] text-[21vw] text-paper/90" aria-hidden="true">PRO WEB<br><span class="text-accent">STUDIO</span></p>
+  <p class="label mt-6">© 2026 PRO WEB STUDIO. All rights reserved.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+(()=>{
+const $=(s,c=document)=>c.querySelector(s),$$=(s,c=document)=>[...c.querySelectorAll(s)];
+const RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const fine=matchMedia('(hover:hover) and (pointer:fine)').matches;
+gsap.registerPlugin(ScrollTrigger);
+let lenis;
+if(!RM){lenis=new Lenis({lerp:.09});lenis.on('scroll',ScrollTrigger.update);
+ gsap.ticker.add(t=>lenis.raf(t*1000));gsap.ticker.lagSmoothing(0);}
+$$('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const h=a.getAttribute('href');
+ if(h!=='#'){const t=$(h);if(t){e.preventDefault();closeMenu();lenis?lenis.scrollTo(t,{offset:0}):t.scrollIntoView()}}else e.preventDefault()}));
+$('#up').onclick=()=>lenis?lenis.scrollTo(0):scrollTo(0,0);
+gsap.to('#bar',{scaleX:1,ease:'none',scrollTrigger:{scrub:.3,start:0,end:'max'}});
+const menu=$('#menu'),bg=$('#burger');let open=false;
+function closeMenu(){if(!open)return;open=false;bg.setAttribute('aria-expanded',false);
+ gsap.to(menu,{clipPath:'inset(0 0 100% 0)',duration:.6,ease:'power4.inOut',onComplete:()=>menu.style.visibility='hidden'});lenis?.start()}
+bg.onclick=()=>{if(open)return closeMenu();open=true;bg.setAttribute('aria-expanded',true);lenis?.stop();
+ gsap.set(menu,{visibility:'visible'});
+ gsap.to(menu,{clipPath:'inset(0 0 0% 0)',duration:.7,ease:'power4.inOut'});
+ gsap.fromTo('.mi',{yPercent:100,opacity:0},{yPercent:0,opacity:1,stagger:.08,delay:.3,duration:.7,ease:'power3.out'})};
+if(fine){let x=0,y=0,rx=0,ry=0;const d=$('#dot'),r=$('#ring');
+ addEventListener('mousemove',e=>{x=e.clientX;y=e.clientY;d.style.transform=`translate(${x}px,${y}px)`});
+ gsap.ticker.add(()=>{rx+=(x-rx)*.15;ry+=(y-ry)*.15;r.style.transform=`translate(${rx}px,${ry}px)`});
+ $$('a,button,.btn').forEach(el=>{el.addEventListener('mouseenter',()=>r.classList.add('hov'));el.addEventListener('mouseleave',()=>r.classList.remove('hov'))});
+ $$('.viewable').forEach(el=>{el.addEventListener('mouseenter',()=>{r.classList.add('view');r.firstChild.textContent='View'});
+  el.addEventListener('mouseleave',()=>{r.classList.remove('view');r.firstChild.textContent=''});
+  const im=$('img',el);el.addEventListener('mouseenter',()=>gsap.to(im,{scale:1.08,duration:.8,ease:'power3.out'}));
+  el.addEventListener('mouseleave',()=>gsap.to(im,{scale:1,duration:.8,ease:'power3.out'}))});
+ $$('.mag').forEach(b=>{b.addEventListener('mousemove',e=>{const q=b.getBoundingClientRect();
+  gsap.to(b,{x:(e.clientX-q.left-q.width/2)*.3,y:(e.clientY-q.top-q.height/2)*.3,duration:.4})});
+  b.addEventListener('mouseleave',()=>gsap.to(b,{x:0,y:0,duration:.7,ease:'elastic.out(1,.4)'}))});
+ $$('.tilt').forEach(c=>{c.addEventListener('mousemove',e=>{const q=c.getBoundingClientRect(),px=(e.clientX-q.left)/q.width,py=(e.clientY-q.top)/q.height;
+  c.style.setProperty('--mx',px*100+'%');c.style.setProperty('--my',py*100+'%');
+  c.style.transform=`rotateY(${(px-.5)*10}deg) rotateX(${(.5-py)*10}deg) translateZ(0)`});
+  c.addEventListener('mouseleave',()=>c.style.transform='')});
+}
+$$('.fq').forEach(b=>b.addEventListener('click',()=>{const body=b.parentElement.nextElementSibling,o=b.getAttribute('aria-expanded')==='true';
+ $$('.fq').forEach(x=>{if(x!==b&&x.getAttribute('aria-expanded')==='true'){x.setAttribute('aria-expanded',false);gsap.to(x.parentElement.nextElementSibling,{height:0,duration:.5,ease:'power3.inOut'})}});
+ b.setAttribute('aria-expanded',!o);gsap.to(body,{height:o?0:'auto',duration:.5,ease:'power3.inOut',onComplete:()=>ScrollTrigger.refresh()})}));
+const tr=$('#track'),cards=$$('#track>article');let idx=0,drag=false,sx=0,sl0=0;
+const mark=()=>{const c=tr.scrollLeft+tr.clientWidth/2;let best=0,bd=1e9;
+ cards.forEach((a,i)=>{const d=Math.abs(a.offsetLeft+a.offsetWidth/2-c);if(d<bd){bd=d;best=i}});
+ idx=best;cards.forEach((a,i)=>a.classList.toggle('on',i===best))};
+tr.addEventListener('scroll',mark,{passive:true});
+tr.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse')return;drag=true;sx=e.clientX;sl0=tr.scrollLeft;tr.style.scrollSnapType='none'});
+addEventListener('pointermove',e=>{if(drag)tr.scrollLeft=sl0-(e.clientX-sx)});
+addEventListener('pointerup',()=>{if(drag){drag=false;tr.style.scrollSnapType='x mandatory'}});
+if(!RM)setInterval(()=>{if(drag)return;idx=(idx+1)%cards.length;tr.scrollTo({left:cards[idx].offsetLeft-(tr.clientWidth-cards[idx].offsetWidth)/2,behavior:'smooth'})},4500);
+function intro(){
+ if(RM)return;
+ gsap.from('.hl',{yPercent:110,duration:1.2,stagger:.12,ease:'power4.out'});
+ gsap.from('.hl-s',{y:30,opacity:0,duration:1,stagger:.15,delay:.5,ease:'power3.out'});
+ gsap.fromTo('#sl',{scaleY:0},{scaleY:1,duration:1.4,repeat:-1,yoyo:true,ease:'power2.inOut'});
+ const w=['convert.','perform.','inspire.','scale.'];let i=0;
+ setInterval(()=>{gsap.to('#kw',{yPercent:-60,opacity:0,duration:.35,onComplete:()=>{i=(i+1)%w.length;$('#kw').textContent=w[i];gsap.fromTo('#kw',{yPercent:60,opacity:0},{yPercent:0,opacity:1,duration:.4})}})},2600);
+}
+function scrollFX(){
+ if(RM)return;
+ $$('.rv').forEach(el=>gsap.from(el,{y:60,opacity:0,duration:1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 85%'}}));
+ gsap.from('.tilt',{y:60,opacity:0,duration:.9,stagger:.08,ease:'power3.out',scrollTrigger:{trigger:'#services',start:'top 60%'}});
+ gsap.from('.lift,.gb',{y:60,opacity:0,duration:.9,stagger:.12,scrollTrigger:{trigger:'#pricing',start:'top 65%'}});
+ const f=$('#fill');f.innerHTML=f.textContent.split(' ').map(w=>`<span style="opacity:.18">${w}</span>`).join(' ');
+ gsap.to('#fill span',{opacity:1,stagger:.1,ease:'none',scrollTrigger:{trigger:f,start:'top 80%',end:'bottom 50%',scrub:true}});
+ $$('.pc').forEach((c,i,a)=>{if(i<a.length-1)gsap.to(c,{scale:.93,opacity:.5,ease:'none',scrollTrigger:{trigger:a[i+1],start:'top 90%',end:'top 15%',scrub:true}});
+  gsap.fromTo($('img',c),{yPercent:-6},{yPercent:6,ease:'none',scrollTrigger:{trigger:c,scrub:true}})});
+ const hz=$('#hz');gsap.to(hz,{x:()=>-(hz.scrollWidth-innerWidth),ease:'none',
+  scrollTrigger:{trigger:'#process',pin:true,scrub:1,end:()=>'+='+(hz.scrollWidth-innerWidth),invalidateOnRefresh:true}});
+ $$('.ct').forEach(el=>{const o={v:0};gsap.to(o,{v:+el.dataset.to,duration:2,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 90%',once:true},onUpdate:()=>el.textContent=Math.round(o.v)})});
+}
+const c={v:0};
+gsap.to(c,{v:100,duration:RM?.3:1.8,ease:'power2.inOut',onUpdate:()=>$('#cnt').textContent=Math.round(c.v),
+ onComplete:()=>gsap.to('#pre',{yPercent:-100,duration:RM?.1:1,ease:'power4.inOut',onStart:intro,onComplete:()=>{$('#pre').remove();scrollFX()}})});
+})();
+</script>
+</body>
+</html>
